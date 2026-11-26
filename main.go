@@ -16,6 +16,7 @@ func main() {
 	// String slice with urls
 	websites := []string{
 		"https://go.dev",
+		"https://github.com",
 		"https://github.com/ijvadeli/web-status-checker",
 	}
 
@@ -54,7 +55,7 @@ func main() {
 		}
 
 		// Create crawled site file and save to crawled
-		filename := u.Hostname() + ".html"
+		filename := u.Host + u.Path + ".html"
 		file, err := os.Create(filepath.Join(dir, filepath.Base(filename)))
 		if err != nil {
 			panic(err)
@@ -62,7 +63,7 @@ func main() {
 		file.Write(body)
 
 		fmt.Println("---------------------------------------")
-		fmt.Println(arrow, u.Scheme+"://"+u.Host)
+		fmt.Println(arrow, u.Scheme+"://"+u.Host+u.Path)
 		fmt.Println(arrow, response.StatusCode, http.StatusText(response.StatusCode))
 		fmt.Println(arrow, responseTime)
 	}

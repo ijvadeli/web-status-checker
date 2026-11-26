@@ -14,3 +14,5 @@ TODO:
 - [x] Return HTTP status
 - [x] Crawl site and save as html file, super simple not optimized 
 - [x] Return reponse time
+- [ ] Create a folder for each seperate host
+- [ ] Save files for all paths from host
