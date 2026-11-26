@@ -3,7 +3,7 @@
 Checklist
 - [x] Check multiple website URLs
 - [x] Display HTTP status codes and response times
-- [ ] Configure request timeouts
+- [x] Configure request timeouts
 - [ ] Retry selected failed requests
 - [ ] Save check results to a CSV or text report
 
