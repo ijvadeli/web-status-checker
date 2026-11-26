@@ -1,7 +1,7 @@
 # Web Status Checker
 
 Checklist
-- [ ] Check multiple website URLs
+- [x] Check multiple website URLs
 - [ ] Display HTTP status codes and response times
 - [ ] Configure request timeouts
 - [ ] Retry selected failed requests
