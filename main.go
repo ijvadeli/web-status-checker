@@ -15,8 +15,8 @@ const arrow = "==>"
 func main() {
 	// String slice with urls
 	websites := []string{
-		"https://go.dev/learn",
-		"https://www.w3schools.com/",
+		"https://go.dev",
+		"https://github.com/ijvadeli/web-status-checker",
 	}
 
 	// Directory for saving crawled files
