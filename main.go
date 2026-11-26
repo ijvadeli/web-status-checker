@@ -30,11 +30,16 @@ func main() {
 			panic(err)
 		}
 
+		// Limiting requests and creating global client
+		client := &http.Client{
+			Timeout: 5 * time.Second,
+		}
+
 		// Start timer
 		timer := time.Now()
 
 		// Create a HTTP request
-		response, err := http.Get(website)
+		response, err := client.Get(website)
 		if err != nil {
 			panic(err)
 		}
