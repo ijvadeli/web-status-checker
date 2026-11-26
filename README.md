@@ -2,7 +2,7 @@
 
 Checklist
 - [x] Check multiple website URLs
-- [ ] Display HTTP status codes and response times
+- [x] Display HTTP status codes and response times
 - [ ] Configure request timeouts
 - [ ] Retry selected failed requests
 - [ ] Save check results to a CSV or text report
@@ -13,4 +13,4 @@ TODO:
 - [x] Check website if its a valid website
 - [x] Return HTTP status
 - [x] Crawl website and save to file, very simple and minimal and not very optimized
-- [ ] Return reponse time
+- [x] Return reponse time

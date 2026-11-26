@@ -7,6 +7,7 @@ import (
 	"net/url"
 	"os"
 	"path/filepath"
+	"time"
 )
 
 const arrow = "==>"
@@ -29,12 +30,17 @@ func main() {
 			panic(err)
 		}
 
-		// Get response status code from requested website
+		// Start timer
+		timer := time.Now()
+
+		// Create a HTTP request
 		response, err := http.Get(website)
 		if err != nil {
 			panic(err)
 		}
 		defer response.Body.Close()
+
+		responseTime := time.Since(timer)
 
 		// Crawl website and read response body
 		body, err := io.ReadAll(response.Body)
@@ -53,5 +59,6 @@ func main() {
 		fmt.Println("---------------------------------------")
 		fmt.Println(arrow, u.Scheme+"://"+u.Host)
 		fmt.Println(arrow, response.StatusCode, http.StatusText(response.StatusCode))
+		fmt.Println(arrow, responseTime)
 	}
 }
