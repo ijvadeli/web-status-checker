@@ -12,4 +12,5 @@ TODO:
 - [x] A for loop that goes through all websites and prints them
 - [x] Check website if its a valid website
 - [x] Return HTTP status
+- [x] Crawl website and save to file, very simple and minimal and not very optimized
 - [ ] Return reponse time
